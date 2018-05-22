@@ -1,9 +1,9 @@
-###### How to fix add-apt-repository command not found
+##### How to fix add-apt-repository command not found
   ```
   $ apt-get install python-software-properties
   ```
 
-###### UFW massive log files
+##### UFW massive log files
 Short info:
 Log files are 'rotated' by logrotate.
 System specific logs are configured in ```/etc/logrotate.conf```
@@ -28,6 +28,21 @@ Other logs have config files in ```/etc/logrotate.d```
 ```
 This it will cost you 400MB of disk space.
 
+**But this is will not stop the Os to log ufv log entries to be logged in kernel.log and in syslog files.**
+
+Fot this you have to edit the file ```/etc/rsyslog.d/20.ufw.conf``` and comment out the last line from 
+
+```"& stop``` 
+
+to 
+
+```& stop```
+
+and restart the service
+
+```$ sudo systemctl restart rsyslog```
+
+
 2st alternative2 : **No log file at all**
 
 ```
@@ -36,7 +51,7 @@ $ sudo ufw logging off
 
 For more advanced options : [ufw.8 man page #Logging](http://manpages.ubuntu.com/manpages/xenial/man8/ufw.8.html#contenttoc8)
 
-###### How to change the PHP version you’re using
+##### How to change the PHP version you’re using
 
   If you have multiple PHP versions installed on your Ubuntu server, you can change what version is the default one.
 
