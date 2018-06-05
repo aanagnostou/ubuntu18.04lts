@@ -1,4 +1,4 @@
-##### Package needed for the installation, you need to install software-properties-common :
+##### You need to install software-properties-common to intall Php 7.1 on Ubuntu 18.04 :
 
 ```
 $ sudo apt-get install software-properties-common
