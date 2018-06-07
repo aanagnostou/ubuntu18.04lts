@@ -17,6 +17,8 @@ Apache:-
 ```
 $ sudo a2dismod php7.2
 $ sudo a2enmod php7.1
+$ sudo a2disconf php7.2-fpm
+$ sudo a2enconf php7.1-fpm
 $ sudo service apache2 restart
 ````
 
