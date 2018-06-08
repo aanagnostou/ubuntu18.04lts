@@ -104,4 +104,5 @@ Leave the other values in this file unchanged
 ```
 $ sudo systemctl start elasticsearch
 ```
-
+### Important note :
+Open file ``` /usr/lib/sysctl.d/elasticksearch.conf ```. Check that the value for ``` vm.max_map_count=262144 ``` is **262144** .
